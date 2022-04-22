@@ -6,8 +6,6 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import Avatar from '@mui/material/Avatar';
@@ -18,9 +16,8 @@ import IconButton from '@mui/material/IconButton';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useState } from "react"
 import AddNotebook from './AddNotebook';
-import { fontSize } from '@mui/system';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import { useNavigate, Link as RouterLink } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 
 const drawerWidth = 240;
@@ -82,7 +79,7 @@ const AppBar = ({currentUser, addNewNotebook, setNewNotebook, open, setOpen, not
               onClose={handleCloseUserMenu}
             >
               <MenuItem onClick={handleCloseUserMenu}>
-                <Typography onClick={() => console.log("Hello")}component="span" textAlign="center">Logout</Typography>
+                <Typography onClick={() => navigate("/")}component="span" textAlign="center">Logout</Typography>
               </MenuItem>
             </Menu>
           </Box>
